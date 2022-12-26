@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Place Searches</title>
+	<link rel="stylesheet"  href="style.css"> 
+  </head>
+  <body>
+   <section>
+   <div class="head-btn">
+		<h2>TAKE NOTES</h2>
+		<button onclick="startNotes()"; class="take-more-btn">TAKE MORE NOTES</button>
+	</div>
+   <div id="projects" class="modals"></div>
+   <div id="note-modal" class="modals">
+		
+		<aside>
+		<header><button onclick="closeModal()";>DONE</button> </header>
+			<form>
+				<div class="wrapper">
+					<label>PROJECT NAME</label>
+					<input type="text" placeholder="Project name here" id="project-name" />
+				</div>
+				<div class="wrapper">
+					<label>PROJECT NAME</label>
+					<textarea id="project-notes"  placeholder="take youtnotes here..."></textarea>
+				</div>
+				<button id="save-data">SAVE</button>
+			</form>
+		</aside>
+	</div>
+<!-- NOTIFICATION MODALS -->
+<!-- =================== -->
+<!-- NOTIFICATION MODALS -->
+	<div id="saved-modal" class="notify">
+		<h3>Note Saved...</h3>
+	</div>
+	<div id="deleted-modal" class="notify">
+		<h3>Please Waite..</h3>
+		<p></p>
+	</div>
+   </section>
+   <script src="app.js"></script>
+  </body>
+</html>

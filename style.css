@@ -1,0 +1,312 @@
+* {
+	margin : 0px;
+	padding : 0px;
+	box-sizing :border-box;
+}
+buton {
+	outline : none;
+	height : 34px;
+	line-height : 34px;
+}
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: url('tiles.png');
+    background-repeat: repeat;
+}
+.head-btn {
+    width: 100%;
+	padding-top : 17px;
+    display: flex;
+    height: 14vh;
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    border-bottom: 20px solid #0e150e;
+    margin-bottom: 10px;
+    box-shadow: -2px 7px 2px #10382ab5;
+}
+.head-btn h2 {
+	display : inline;
+}
+#note-modal {
+	position :absolute;
+	top : 0px;
+	left : 0px;
+	width : 100%;
+	height : 100%;
+	display :none;
+	background-color: black;
+	transition : all 0.5s ease-in-out;
+}
+#note-modal aside {
+	width : 100%;
+	height : 80vh;
+	display :flex;
+}
+#note-modal aside form {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#note-modal aside form .wrapper {
+    text-align: center;
+    min-height: 10vh;
+	width : 100%;
+    border-bottom: 3px solid red;
+	display :flex;
+	flex-direction :column;
+	border : none;
+}
+#note-modal aside form .wrapper input {
+    height: 10vh;
+    border: none;
+    background: #ff00007d;
+    outline: none;
+	font-size : 24px;
+	font-weight : 800;
+}
+#note-modal aside form .wrapper textarea {
+    min-height: 20vh;
+    border: none;
+    background: #ff00007d;
+    outline: none;
+    font-size: 24px;
+    font-weight: 800;
+}
+#project-notes {
+	width : 100%;
+	min-height : 20vh;
+}
+#note-modal aside form button { 
+	width : 130px;
+	height : 40px;
+	line-height : 40px;
+}
+#note-modal  .tempH1 {
+	margin :auto;
+	font-size :62px;
+	color :white;
+}
+#projects {
+	display :flex;
+	flex-wrap : wrap;
+	justify-content :center;
+}
+.note-wrapper {
+    height: 300px;
+    width: 327px;
+    border: 9px solid #55d3e3;
+    box-shadow: 5px 9px 7px #000000a6;
+    padding: 2%;
+    margin: 5px;
+    position: relative;
+    cursor: pointer;
+    background: #fffffff7;
+}
+.note-wrapper  .timestamp {
+    position: abosulte;
+    bottom: 0px;
+    left: 0px;
+    text-align: right;
+    width: 100%;
+    position: absolute;
+    background: #badbea;
+    padding: 5px;
+    color: #ba0000;
+    pointer-events: none;
+}
+.nothing {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    position: absolute;
+    top: 0;
+    background: url('modal.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #ff3200b0;
+    background-blend-mode: multiply;
+}
+.modals aside {
+	width : 480px;
+	height : 30vh;
+	margin :auto;
+}
+.nothing aside {
+    width: 424px;
+    height: 230px;
+    margin: auto;
+    display: flex;
+    background-color: #ffffffc2;
+    box-shadow: 7px 8px 2px #0f0909;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: red;
+    text-shadow: 2px 1px 1px black;
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+}
+.nothing aside p {
+    color: #1160c3;
+    text-shadow: 2px 1px 1px black;
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: underline;
+    font-style: oblique;
+    animation: flashBack 1.5s ease infinite;
+}
+.nothing aside button {
+    transition: all 0.5s ease-in-out;
+    background-color: red;
+    color: white;
+    width: 120px;
+    height: 34px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: initial !important;
+}
+.take-more-btn {
+    width: 200px;
+    height: 60px;
+    line-height: 42px;
+    background-color: #7fc6e6;
+    color: red;
+    margin: 15px 0px;
+    border: none;
+    border-bottom: 5px solid;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+}
+.modals aside {
+	display :flex;
+	flex-direction : column;
+}
+.modals header {
+    background-image: linear-gradient(91deg, black, #bd2b2b);
+}
+#projects button {
+    background-color: #b50000;
+    width: 80px;
+    height: 36px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    color: white;
+    margin: 20px;
+    transition: all 0.8s ease-in-out;
+    position: absolute;
+    bottom: 12px;
+    left: -16px;
+}
+#note-modal button {
+    background-color: #b50000;
+    width: 80px;
+    height: 36px;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    color: white;
+    margin: 20px;
+}
+
+.notify {
+    height: 142px;
+    width: 465px;
+    background-color: black;
+    color: #f41010;
+    font-weight: 700;
+    display: none;
+    z-index: 1500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 20px;
+}
+#deleted-modal {
+	flex-direction : column;
+	height: 182px;
+}
+#deleted-modal p {
+    color: #00fbae;
+    font-size: 91px;
+    font-weight: 700;
+    text-align: center;
+}
+.notify h3 {
+    margin: auto;
+    text-shadow: 5px 5px 5px blck;
+    text-shadow: 3px 3px 2px black;
+    font-size: 47px;
+    font-weight: 700;
+    font-style: italic;
+}
+@keyframes flashBack {
+	0% {
+		transform : scale(0.8);
+	}
+	100% {
+		transform : scale(1);
+	}
+}
+/* =============================
+	hOVER FOCUS ACTIVE STATES
+============================= */
+
+#note-modal aside form .wrapper input:focus {
+    background: black;
+	color :white;
+	font-size : 32px;
+	text-align :center;
+}
+#note-modal aside form .wrapper textarea:focus {
+	background: black;
+	color :white;
+	font-size : 32px;
+	text-align :center;
+}
+.take-more-btn:hover {
+    background-color: #334852;
+    color: #c7bbbb;
+    font-weight: 800;
+	letter-spacing : 2px;
+}
+
+#projects button:hover {
+    background-color: #ff000085;
+    color: black;
+	letter-spacing : 1.8px;
+	font-weight : 700;
+   
+} 
+/* ==========================
+	JAVASCRIPT EMBEDED CLASSES
+============================= */
+.open {
+	display : flex !important;
+	animation : addModal 2s ease-in-out forwards;
+};
+
+@keyframes addModal {
+	0% {
+		opcaity : 0;
+	}
+	0% {
+		opcaity : 0.5;
+	}
+	0% {
+		opcaity : 1;
+	}
+}

@@ -1,0 +1,3 @@
+Notes taking app
+Write, save and trash when you no longer need it.
+This is Vanilla Js notes taking using wep Api Localstorage as storaged
